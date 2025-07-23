@@ -1,0 +1,279 @@
+ /*    Removes default spacing sizing     */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+          /*    set base font style full page fixed background image     */
+body {
+    font-family: Roboto, Arial;
+    background-image: url(./Img/BG\ img.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-attachment: fixed;
+}
+
+                     /*    Style Header starts    */
+
+
+                /*     Make header sticky at the top and arrange children in a row    */
+.Header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    height: 110px;
+
+    background-color: #eeeeee;
+
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    position: sticky;
+}
+
+          /*    Add a background image (sky/cloud) over header    */
+.Header-main {
+    background-image: url(./Img/Cloud\ sky\ c.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+              /*   style a Logo image    */
+#logo {
+    margin-left: 25px;
+    margin-right: 25px;
+    height: auto;
+    width: 90px;
+    float: left;
+
+    border-radius: 20px;
+    border: 5px solid white;
+    border-image: url(./Img/border-blue.webp) 8% round;
+}
+
+               /*   Fill the company name with image text effect    */
+.Company-name {
+    text-align: center;
+    font-size: 3rem;
+    font-family: impact;
+    font-weight: bold; 
+
+    color: transparent;
+    background-image: url(./Img/Eye.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+                /*    Create horizontal nav bar with spacing    */
+.Nav-bar {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    float: right;
+}
+
+.Nav-bar li a {
+    color: #0f0f0f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400; 
+}
+
+.Nav-bar li a:hover {
+    color: rgb(224, 155, 53);
+    transition: 0.3 ease;
+    transform: scale(2);
+}
+
+.Nav-bar.show {
+    display: flex;
+}
+
+              /*      Style Header ends      */
+
+                       /*     Style Section ends      */
+
+h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #322a71;
+    line-height: 5rem;
+}
+
+                    /*    Style section headings with size and color       */
+
+h3 {
+    color: #570042;
+    padding-bottom: 20px;
+    font-size: 1.55rem;
+    line-height: 3rem;
+}
+
+
+                /*     Wrap each section with max width, margin auto (centered), box shadow      */
+.Section-home,
+.Section-about,
+.Section-service {
+    max-width: 1200px;
+
+    scroll-margin-top: 145px;
+    margin: 10px auto;
+    padding: 10px 40px 20px;
+    border-radius: 10px;
+
+    background-color: #f7f6f6;
+    color: #323a41;
+    box-shadow: 0 5px 20px rgba(2, 1, 1, 0.1); 
+}
+         
+
+           /*       Set content font size and line spacing        */
+.home-content, 
+.about-content, 
+.service-content  {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+                    /*       Use CSS grid to layout columns in 3 sections        */
+.about-row-contain,
+.service-row-contain {
+    display: grid;
+    vertical-align: top;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+                  /*      Contact section with box shadow, rounded corners, and centered       */
+.Section-contact {
+    max-width: auto;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 20px 30px;
+
+    background-color: #f1eded;
+    color: #323a41;
+    box-shadow: 0 5px 20px rgba(2, 1, 1, 0.1);
+    border-radius: 10px;
+}     
+
+                 /*      Set content font size and line spacing       */
+.contact-details {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+                   /*     Style Section ends    */
+
+
+                           /*    Style Footer starts      */
+
+.Footer-main {
+    color: #ff6347;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 20px;
+}
+
+.Footer-rights {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.Footer-rights a {
+    color: #336699;
+    text-decoration: none;
+}
+
+.Footer-rights a:hover {
+    color: #ff6347;
+}
+
+                      /*     Footer links horizontally laid out and styled on hover      */
+
+.Footer-connect {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
+                     /*     Footer social icons or connect section spaced with large font      */
+
+                     /*      Style Footer ends      */
+
+                                    /*     Media Queries      */
+
+@media (max-width: 768px) {
+    .Header-main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    #logo {
+        width: 70px;
+        margin: 10px 0;
+    }
+
+    .Company-name {
+        font-size: 2rem;
+    }
+
+    .Nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .about-row-contain,
+    .service-row-contain {
+        grid-template-columns: 1fr;
+    }
+
+    .Section-home,
+    .Section-about,
+    .Section-service,
+    .Section-contact {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+    }
+
+    .home-content,
+    .about-content,
+    .service-content,
+    .contact-details {
+        font-size: 1rem;
+    }
+
+    .Footer-rights {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+                        /*         Media Queries ends           */
