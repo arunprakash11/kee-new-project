@@ -8,20 +8,21 @@
    /*    text color and font style from all elements   */
 body {
     color: rgb(42, 43, 45);
-    font-family: Roboto, Arial; 
-    /* background-image: url(./Img/BG\ img\ c.png); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
+    font-family: Roboto, Arial;
 }
 
-          /*     Header section Flexbox for horizontal layout of logo, company name, navigation-bar from all elements     */
+                               /*   Style Starts  */
+
+       /*   Header   */
+
+/*  Header section Flexbox for horizontal layout of logo, company name, navigation-bar from all elements  */
+
 .Header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
-    height: 110px;
+    padding: 10px 10px;
+    height: 120px;
 
     background-color: #eeeeee;
 
@@ -29,18 +30,14 @@ body {
     left: 0%;
     right: 0%;
     position: sticky;
+    z-index: 10;
 }
 
-.Header-main {
-    background-image: url(./Img/Cloud\ sky\ c.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-} 
 
       /*    Logo image    */
+
 #logo {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 0 15px;
     height: auto;
     width: 90px;
     float: left;
@@ -51,14 +48,14 @@ body {
 }
 
              /*    Company name     */
+
 .Company-name {
     text-align: center;
-    font-size: 3rem;
-    font-family: impact;
-    font-weight: bold; 
+    margin: 0 20px;
+    font: bold 3.2rem impact; 
 
     color: transparent;
-    background-image: url(./Img/Eye.jpg); 
+    background-image: url(./Img/Mix\ color.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -67,6 +64,7 @@ body {
 }
 
           /*    Navigation-bar     */
+
 .Nav-bar {
     display: flex;
     gap: 30px;
@@ -77,13 +75,13 @@ body {
 .Nav-bar li a {
     color: #0f0f0f;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 400; 
+    transition: 0.3 ease;
 }
 
 .Nav-bar li a:hover {
     color: rgb(224, 155, 53);
-    transition: 0.3 ease;
     transform: scale(2);
 }
 
@@ -93,15 +91,12 @@ body {
 
 
        /*   Section   */
-PP-Section {
-    font-family: 'Times New Roman', Times, serif; 
-}
 
 h2 {
     font-size: 1.7rem;
-    line-height: 2rem;
     color: #313126;
     padding: 20px;
+    line-height: 2rem;
 }
 
 .pp-right, .tc-right, .spt-right {
@@ -111,10 +106,11 @@ h2 {
 }
 
          /*  Footer   */
+
 .Footer-main {
+    text-align: center;
     color: #ff6347;
     background-color: #eeeeee;
-    text-align: center;
     padding: 20px;
     margin-top: 30px;
 }
@@ -124,6 +120,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 20px;
     margin-top: 20px;
 }
@@ -138,84 +135,82 @@ h2 {
 }
 
 
-/* ------------------ Medium Screens (Tablets, <= 1024px) ------------------ 
-@media screen and (max-width: 1024px) {
-  .Header-main {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    text-align: center;
-  }
+                /*  --------------  Style Ends  -------------  */
 
-  .Company-name {
-    font-size: 2.2rem;
-    margin-top: 10px;
-  }
+                            /*   ===================   Media Queries   ====================   */
 
-  .Nav-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-  }
+@media (max-width: 1024px) {
+    .Company-name {
+        font-size: 2.5rem;
+    }
 
-  .pp-right, .tc-right, .spt-right {
-    padding-left: 40px;
-    padding-right: 20px;
-  }
-} */
+    .Nav-bar {
+        gap: 20px;
+    }
 
-/* ------------------ Small Screens (Mobile, <= 768px) ------------------ */
-
-
-
-@media screen and (max-width: 768px) {
-  body {
-    background-attachment: scroll; /* Better performance on mobile */
-  }
-
-  .Header-main {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .Company-name {
-    font-size: 1.8rem;
-    padding: 10px;
-  }
-
-  #logo {
-    width: 70px;
-    margin: 10px auto;
-    display: block;
-    float: none;
-  }
-
-  .Nav-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .Nav-bar li a {
-    font-size: 1.1rem;
-  }
-
-  .pp-right, .tc-right, .spt-right {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-  }
-
-  .Footer-main {
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-
-  .Footer-rights {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .pp-right, .tc-right, .spt-right {
+        padding-left: 40px;
+        font-size: 0.95rem;
+    }
 }
+
+@media (max-width: 768px) {
+    .Header-main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #logo {
+        width: 70px;
+        margin: 10px 0;
+    }
+
+    .Company-name {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .Nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .pp-right, .tc-right, .spt-right {
+        padding-left: 20px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Company-name {
+        font-size: 1.7rem;
+    }
+
+    .Nav-bar li a {
+        font-size: 1rem;
+    }
+
+    .pp-right, .tc-right, .spt-right {
+        padding-left: 10px;
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    .Footer-rights {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+                          /*   ----------------  Media Queries ends    ------------------    */
