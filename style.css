@@ -46,9 +46,9 @@ body {
 .Company-name {
     text-align: center;
     margin: 0 20px;
-    font: medium 3.2rem impact;
+    font: 400 3.3rem impact;
  
-    color: rgb(12, 63, 146);
+    color: rgb(5, 48, 117);
     /* background-image: url(./Img/Mix\ color.jpg); 
     background-repeat: no-repeat;
     background-size: cover;

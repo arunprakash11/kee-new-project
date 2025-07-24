@@ -54,13 +54,17 @@ body {
     margin: 0 20px;
     font: bold 3.2rem impact; 
 
-    color: transparent;
-    background-image: url(./Img/Mix\ color.jpg); 
+    color: rgb(5, 48, 117);
+    /* background-image: url(./Img/Mix\ color.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
+}
+
+span {
+    color: rgb(77, 212, 129);
 }
 
           /*    Navigation-bar     */
