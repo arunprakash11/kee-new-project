@@ -46,15 +46,19 @@ body {
 .Company-name {
     text-align: center;
     margin: 0 20px;
-    font: bold 3.2rem impact;
+    font: medium 3.2rem impact;
  
-    color: transparent;
-    background-image: url(./Img/Mix\ color.jpg); 
+    color: rgb(12, 63, 146);
+    /* background-image: url(./Img/Mix\ color.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
+}
+
+span {
+    color: rgb(77, 212, 129);
 }
 
                 /*    Create horizontal nav bar with spacing    */
@@ -213,8 +217,7 @@ h3 {
     font-size: 2rem;
 
     gap: 40px;
-    margin-top: 20px;
-    
+    margin-top: 20px;   
 }
 
               /*   Footer social icons or connect section spaced with large font     */
@@ -223,188 +226,104 @@ h3 {
 
                                     /*   ===============   Media Queries   ================   */
 
-           /*   Devices ≤ 1024px (Tablet landscape & small laptops)    */
-@media (max-width: 1024px) {
-    .Company-name {
-        font-size: 2.5rem;
-    }
+/* ===== 📱 Mobile Devices (0px - 600px) ===== */
+@media (max-width: 600px) {
+  .Header-main {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
 
-    .Nav-bar {
-        gap: 20px;
-    }
+  .Company-name {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
 
-    .about-row-contain,
-    .service-row-contain {
-        grid-template-columns: 1fr 1fr;
-    }
+  .Nav-bar {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
 
-    h2 {
-        font-size: 2rem;
-        line-height: 4rem;
-    }
+  .about-row-contain,
+  .service-row-contain {
+    grid-template-columns: 1fr;
+  }
 
-    h3 {
-        font-size: 1.3rem;
-        line-height: 2.5rem;
-    }
+  .Section-home,
+  .Section-about,
+  .Section-service,
+  .Section-contact {
+    padding: 15px;
+  }
+
+  .Footer-connect {
+    font-size: 1.5rem;
+    gap: 20px;
+  }
+
+  .Footer-rights {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-            /*   Devices ≤ 768px (Tablets, medium phones)   */
-@media (max-width: 768px) {
-    .Header-main {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 20px;
-    }
+/* ===== 📱💻 Tablets (601px - 1024px) ===== 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .Header-main {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 15px;
+  }
 
-    #logo {
-        width: 70px;
-        margin: 10px 0;
-    }
+  .Company-name {
+    font-size: 2.5rem;
+    margin: 10px;
+  }
 
-    .Company-name {
-        font-size: 2rem;
-        margin: 10px 0;
-    }
+  .Nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 
-    .Nav-bar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-    }
+  .about-row-contain,
+  .service-row-contain {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .Section-home,
-    .Section-about,
-    .Section-service {
-        padding: 20px;
-    }
+  .Section-home,
+  .Section-about,
+  .Section-service,
+  .Section-contact {
+    padding: 20px;
+  }
+}*/
 
-    .about-row-contain,
-    .service-row-contain {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-    }
+/* ===== 💻 Laptops (1025px - 1440px) ===== */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .Company-name {
+    font-size: 2.8rem;
+  }
 
-    .contact-details {
-        font-size: 1rem;
-    }
+  .about-row-contain,
+  .service-row-contain {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} 
 
-    h2 {
-        font-size: 1.8rem;
-        line-height: 3rem;
-    }
+/* ===== 🖥️ Desktops / PCs (1441px and above) ===== */
+/* You don’t need to change much here unless very large screen */
+@media (min-width: 1441px) {
+  .Company-name {
+    font-size: 3.2rem;
+  }
 
-    h3 {
-        font-size: 1.2rem;
-        line-height: 2.2rem;
-    }
+  .Nav-bar {
+    gap: 40px;
+  }
 }
-
-            /*    Devices ≤ 480px (Mobile phones)    */
-@media (max-width: 480px) {
-    .Company-name {
-        font-size: 1.6rem;
-    }
-
-    .Nav-bar li a {
-        font-size: 1rem;
-    }
-
-    .home-content, 
-    .about-content, 
-    .service-content {
-        font-size: 0.95rem;
-        line-height: 1.4rem;
-    }
-
-    .contact-details {
-        font-size: 0.95rem;
-        line-height: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
-
-    h3 {
-        font-size: 1.1rem;
-        line-height: 2rem;
-    }
-
-    .Footer-rights,
-    .Footer-connect {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .Section-home,
-    .Section-about,
-    .Section-service {
-        padding: 15px;
-    }
-}
-
-                             /* ------------------------------------------------------- */
-
-/* @media (max-width: 720px) {
-    .Header-main {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        text-align: center;
-    }
-
-    #logo {
-        width: 70px;
-        margin: 10px 0;
-    }
-
-    .Company-name {
-        font-size: 2rem;
-    }
-
-    .Nav-bar {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .about-row-contain,
-    .service-row-contain {
-        grid-template-columns: 1fr;
-    }
-
-    .Section-home,
-    .Section-about,
-    .Section-service,
-    .Section-contact {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 2.2rem;
-        line-height: 3.5rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        line-height: 2.2rem;
-    }
-
-    .home-content,
-    .about-content,
-    .service-content,
-    .contact-details {
-        font-size: 1rem;
-    }
-
-    .Footer-rights {
-        flex-direction: column;
-        gap: 10px;
-    }
-} */
 
                         /*   ----------------  Media Queries  ------------------    */
