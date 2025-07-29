@@ -10,6 +10,7 @@ body {
     font-family: Roboto, Arial;
 }
 
+
                      /*  ============  Style Header Starts   =============   */
 
 
@@ -90,9 +91,52 @@ span {
 
                        /*   =============   Style Section Starts  =============    */
 
+
+#Tpp {
+  position: relative;
+  width: 100%;
+  height: 450px;
+
+  background: url(./Img/TPP.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} 
+
+#Tpp::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 243, 243, 0.30); /* 0.5 = 50% dark */
+  border-radius: 10px;
+  
+  z-index: 1;
+}
+
+h4 { 
+  padding: 0 300px;
+  color: #322a71 !important;
+
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 3rem;
+  font-weight: 550;
+
+  z-index: 7;
+}
+
 h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #322a71;
     line-height: 5rem;
 }
@@ -118,6 +162,7 @@ h3 {
     padding: 10px 40px 20px;
     border-radius: 10px;
 
+    opacity: 90%;
     background-color: #f7f6f6;
     color: #323a41;
     box-shadow: 0 5px 20px rgba(2, 1, 1, 0.1); 
@@ -143,7 +188,7 @@ h3 {
 .about-content, 
 .service-content  {
     font-size: 1.1rem;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
 }
 
                     /*       Use CSS grid to layout columns in 3 sections        */
@@ -153,6 +198,56 @@ h3 {
     vertical-align: top;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+}
+
+#Company {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 4px;
+  margin-right: 190px;
+}
+
+#expertise {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 5px;
+  margin-right: 215px;
+  border-radius: 20px;
+}
+
+#crew {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 4px;
+  margin-right: 240px;
+}
+
+#ServiceOff {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 4px;
+  margin-right: 125px;
+
+}
+
+#Components {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 4px;
+  margin-right: 155px;
+}
+
+#Customers {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-top: 7px;
+  margin-right: 170px;
 }
 
                   /*      Contact section with box shadow, rounded corners, and centered       */
@@ -166,10 +261,12 @@ h3 {
 
     box-shadow: 0 5px 20px rgba(2, 1, 1, 0.1);
     border-radius: 10px;
-}     
+}
+
 
                  /*      Set content font size and line spacing       */
 .contact-details {
+
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.7rem;
