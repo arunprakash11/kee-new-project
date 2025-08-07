@@ -180,7 +180,7 @@ h3 {
 .home-content, 
 .about-content, 
 .service-content  {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7rem;
 }
 
@@ -193,7 +193,7 @@ h3 {
     column-gap: 20px;
 }
 
-.sub-head-icons {
+.sub-heads-icons {
   display: flex;
   justify-content: start; 
   align-items: flex-start;
@@ -339,7 +339,7 @@ h3 {
   }
 
   h4 {
-    padding: 0 30px;
+    padding: 0 120px;
     font-size: 2rem;
   }
 
@@ -348,7 +348,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .sub-head-icons {
+  .sub-heads-icons {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
