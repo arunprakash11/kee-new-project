@@ -39,14 +39,15 @@ body {
 
     border-radius: 20px;
     border: 5px solid white;
-    border-image: url(./Img/border-blue.webp) 8% round;
+    /* border-image: url(./Img/border-blue.webp) 8% round; */
 }
 
-               /*   Fill the company name with image text effect    */
+               /*   company name with image text effect    */
 .Company-name {
     text-align: center;
     margin: 0 20px;
     font: 400 3.3rem impact;
+
     color: rgb(5, 48, 117);
 }
 
@@ -124,15 +125,36 @@ span {
   z-index: 1;
 }
 
-h4 { 
+#Tpp h4 { 
   padding: 0 300px;
-  color: #ad3333 !important;
 
   font-family: 'Times New Roman', Times, serif !important;
   font-size: 3rem;
   font-weight: 550;
 
-  z-index: 7;
+  z-index: 2; /* stays above the overlay */
+
+  background: linear-gradient(90deg, #BF971F, #A68549, #ba7521);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  animation: fadeSlideUp 1.5s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 }
 
 h2 {
@@ -292,127 +314,157 @@ h3 {
 
                                     /*   ===============   Media Queries   ================   */
 
-/* -------- Medium Screens (Tablets, Laptops) -------- */
 
-@media screen and (max-width: 1024px) {
-  .Header-main {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .Company-name {
-    font-size: 2.5rem;
-    margin-top: 10px;
-  }
-
-  .Nav-bar {
-    justify-content: center;
-    gap: 20px;
-  }
-
-  h4 {
-    padding: 0 100px;
-    font-size: 2.5rem;
-  }
-
-  .about-row-contain,
-  .service-row-contain {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* -------- Small Devices (Tablets, Phones) -------- */
-
-@media screen and (max-width: 780px) {
-  .Company-name {
-    font-size: 2rem;
-  }
-
-  .Nav-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 10px;
-  }
-
-  #logo {
-    width: 70px;
-    margin: 10px 0;
-  }
-
-  #Tpp {
-    height: 350px;
-    padding: 30px 10px;
-  }
-
-  h4 {
-    padding: 0 120px;
-    font-size: 2rem;
-  }
-
-  .about-row-contain,
-  .service-row-contain {
-    grid-template-columns: 1fr;
-  }
-
-  .sub-heads-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  #Company,
-  #expertise,
-  #crew,
-  #ServiceOff,
-  #Components,
-  #Customers {
-    margin: 10px;
-  }
-
+/* ================= LARGE DESKTOPS (Very Wide Screens) ================= */
+@media (min-width: 1400px) {
   .Section-home,
   .Section-about,
   .Section-service {
-    scroll-margin-top: 290px;
-    padding: 20px 15px;
+    max-width: 1400px;
   }
-  .Section-contact {
-    scroll-margin-top: 290px;
+  .Company-name {
+    font-size: 3.8rem;
+  }
+  #Tpp h4 {
+    font-size: 3.5rem;
+    padding: 0 350px;
   }
 }
 
-/* -------- Extra Small Devices (Phones) -------- */
-
-@media screen and (max-width: 480px) {
+/* ================= LAPTOPS ================= */
+@media (max-width: 1399px) and (min-width: 1200px) {
   .Company-name {
+    font-size: 3.2rem;
+  }
+  #Tpp h4 {
+    font-size: 3rem;
+    padding: 0 250px;
+  }
+}
+
+/* ================= TABLETS ================= */
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  /* Header adjustments */
+  .Header-main {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    text-align: center;
+    padding: 15px;
+  }
+  #logo {
+    width: 75px;
+    border-width: 4px;
+  }
+  .Company-name {
+    font-size: 2.5rem;
+    margin: 5px 0;
+  }
+  .Nav-bar {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Nav-bar li a {
+    font-size: 1rem;
+  }
+
+  /* TPP Section */
+  #Tpp {
+    height: 350px;
+  }
+  #Tpp h4 {
+    padding: 0 100px;
+    font-size: 2.2rem;
+  }
+
+  /* Content sections for better fit */
+  .about-row-contain,
+  .service-row-contain {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+  }
+
+  /* Section containers */
+  .Section-home,
+  .Section-about,
+  .Section-service {
+    scroll-margin-top: 245px;
+    /* padding: 10px 15px;
+    margin: 20px auto; */
+  }
+  .Section-contact {
+    scroll-margin-top: 245px;
+  }
+
+  /* Footer */
+  .Footer-connect {
+    gap: 25px;
+    font-size: 1.6rem;
+  }
+}
+
+/* ================= MOBILES ================= */
+@media (max-width: 767px) {
+
+  /* Header stacks vertically */
+  .Header-main {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+    text-align: center;
+  }
+  #logo {
+    width: 65px;
+  }
+  .Company-name {
+    font-size: 1.8rem;
+    margin: 5px 0;
+  }
+
+  /* Navigation smaller & stacked */
+  .Nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Nav-bar li a {
+    font-size: 0.95rem;
+  }
+
+  /* TPP Section smaller height */
+  #Tpp {
+    height: 250px;
+  }
+  #Tpp h4 {
+    padding: 0 20px;
     font-size: 1.5rem;
   }
 
-  .Nav-bar {
-    font-size: 1rem;
-    gap: 8px;
+  /* Section padding reduced */
+  .Section-home,
+  .Section-about,
+  .Section-service {
+    scroll-margin-top: 260px;
+    padding: 10px 15px;
+    margin: 20px auto;
+  }
+  .Section-contact {
+    scroll-margin-top: 240px;
+  }  
+
+  /* Content grids → single column */
+  .about-row-contain,
+  .service-row-contain {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
   }
 
-  h4 {
-    font-size: 1.4rem;
-    padding: 0 10px;
-  }
-
-  h2, h3 {
-    font-size: 1.2rem;
-  }
-
-  .Footer-main {
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-
-  .Footer-rights,
+  /* Footer compact */
   .Footer-connect {
-    flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    font-size: 1.4rem;
   }
 }
 

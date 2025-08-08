@@ -43,7 +43,7 @@ body {
 
     border-radius: 20px;
     border: 5px solid white;
-    border-image: url(./Img/border-blue.webp) 8% round;
+    /* border-image: url(./Img/border-blue.webp) 8% round; */
 }
 
              /*    Company name     */
@@ -51,7 +51,7 @@ body {
 .Company-name {
     text-align: center;
     margin: 0 20px;
-    font: bold 3.2rem impact; 
+    font: 400 3.3rem impact; 
 
     color: rgb(5, 48, 117);
 }
@@ -145,77 +145,106 @@ h2 {
 
                             /*   ===================   Media Queries   ====================   */
 
-@media (max-width: 1024px) {
-    .Company-name {
-        font-size: 2.5rem;
-    }
 
-    .Nav-bar {
-        gap: 20px;
-    }
-
-    .pp-right, .tc-right, .spt-right {
-        padding-left: 40px;
-        font-size: 0.95rem;
-    }
+/* ================== LARGE DESKTOPS (above 1400px) ================== */
+@media (min-width: 1400px) {
+  .Company-name {
+    font-size: 3.6rem;
+  }
+  .Nav-bar li a {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
 }
 
-@media (max-width: 768px) {
-    .Header-main {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        text-align: center;
-        padding: 20px;
-    }
-
-    #logo {
-        width: 70px;
-        margin: 10px 0;
-    }
-
-    .Company-name {
-        font-size: 2rem;
-        margin: 10px 0;
-    }
-
-    .Nav-bar {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .pp-right, .tc-right, .spt-right {
-        padding-left: 20px;
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-    }
+/* ================== LAPTOPS (1200px – 1399px) ================== */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .Company-name {
+    font-size: 3.2rem;
+  }
+  .Nav-bar li a {
+    font-size: 1.1rem;
+  }
 }
 
-@media (max-width: 480px) {
-    .Company-name {
-        font-size: 1.7rem;
-    }
-
-    .Nav-bar li a {
-        font-size: 1rem;
-    }
-
-    .pp-right, .tc-right, .spt-right {
-        padding-left: 20px;
-        font-size: 0.85rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-        padding: 15px;
-    }
-
-    .Footer-rights {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* ================== TABLETS (768px – 1199px) ================== */
+@media (max-width: 1199px) and (min-width: 768px) {
+  /* Header becomes stacked */
+  .Header-main {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    text-align: center;
+  }
+  #logo {
+    width: 75px;
+    border-width: 4px;
+  }
+  .Company-name {
+    font-size: 2.5rem;
+    margin: 5px 0;
+  }
+  .Nav-bar {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Nav-bar li a {
+    font-size: 1rem;
+  }
+  .pp-right, .tc-right, .spt-right {
+    padding-left: 50px;
+  }
 }
+
+/* ================== MOBILES (below 768px) ================== */
+@media (max-width: 767px) {
+  /* Header vertical layout */
+  .Header-main {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    height: auto;
+    text-align: center;
+  }
+  #logo {
+    width: 65px;
+  }
+  .Company-name {
+    font-size: 1.8rem;
+    margin: 5px 0;
+  }
+
+  /* Navigation stacked */
+  .Nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Nav-bar li a {
+    font-size: 0.95rem;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+  .pp-right, .tc-right, .spt-right {
+    padding-left: 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Footer smaller */
+  .Footer-main {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+  .Footer-rights {
+    gap: 10px;
+  }
+}                        
+
 
                           /*   ----------------  Media Queries ends    ------------------    */
